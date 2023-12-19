@@ -16,7 +16,7 @@ function prompt {
     $(if (Test-Path variable:/PSDebugContext) { "$($blue)[DBG]: $($resetColor)" }
         elseif($principal.IsInRole($adminRole)) { "$($red)[ADMIN]: $($resetColor)" }
         else { '' }
-    ) + "$($purple)[$(Get-Date -f 'MM/dd/yyyy') $($blue)$(Get-Date -f 'hh:mm:ss tt')] $($resetColor)" +
+    ) + "$($purple)$(Get-Date -f 'MM/dd/yyyy') $($blue)$(Get-Date -f 'hh:mm:ss tt') $($resetColor)" +
         "$($green)$currentuser $($resetColor)" +
         "$($yellow)$(Get-Location) $($resetColor)" +
         $(if ($NestedPromptLevel -ge 1) { '>>' }) + '> '
