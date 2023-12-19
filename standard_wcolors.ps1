@@ -10,10 +10,11 @@ function prompt {
     $green = "`e[32m"
     $purple = "`e[35m"
     $yellow = "`e[33m"
+    $red = "`e[31m"
     $resetColor = "`e[0m"
 
     $(if (Test-Path variable:/PSDebugContext) { "$($blue)[DBG]: $($resetColor)" }
-        elseif($principal.IsInRole($adminRole)) { "$($green)[ADMIN]: $($resetColor)" }
+        elseif($principal.IsInRole($adminRole)) { "$($red)[ADMIN]: $($resetColor)" }
         else { '' }
     ) + "$($purple)[$(Get-Date -f 'MM/dd/yyyy') $($resetColor)] $($blue)[$(Get-Date -f 'hh:mm:ss tt')] $($resetColor)" +
         "$($green)$currentuser $($resetColor)" +
