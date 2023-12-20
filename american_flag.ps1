@@ -17,5 +17,5 @@ function prompt {
     ) + "$($white)$(Get-Date -f 'MM/dd/yyyy') $($blue)$(Get-Date -f 'hh:mm:ss tt') $($resetColor)" +
         "$($red)$currentuser $($resetColor)" +
         "$($white)$(Get-Location) $($resetColor)" +
-        $(if ($NestedPromptLevel -ge 1) { "$($blue)>>$($resetColor)" }) + "$(blue)$('> ')"
+        $(if ($NestedPromptLevel -ge 1) { "$($blue)>>$($resetColor)" }) + "$($blue)$('> ')"
 }
